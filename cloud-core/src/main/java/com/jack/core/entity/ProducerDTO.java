@@ -7,18 +7,18 @@ package com.jack.core.entity;
  * @Class Producer.java
  * @Desc 生产者
  */
-public class Producer {
+public class ProducerDTO {
 
     private String name;
-    private int age;
-    private String add;
+    private Integer age;
+    private String address;
     private String email;
 
-    public Producer() {
-        this.name = "name";
-        this.age = 12;
-        this.add = "北京市历史互通";
-        this.email = "6666.qq.com";
+    public ProducerDTO() {
+        this.name = "喵";
+        this.age = 25;
+        this.address = "河北省邢台市桥西区泉西街道燕云台32号";
+        this.email = "2134923474@qq.com";
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Producer {
         return "Producer{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", add='" + add + '\'' +
+                ", add='" + address + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }

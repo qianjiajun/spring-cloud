@@ -7,18 +7,18 @@ package com.jack.core.entity;
  * @Class Consumer.java
  * @Desc 消费者
  */
-public class Consumer {
+public class ConsumerDTO {
 
     private String name;
-    private int age;
-    private String add;
+    private Integer age;
+    private String address;
     private String email;
 
-    public Consumer() {
-        this.name = "name";
-        this.age = 12;
-        this.add = "北京市历史互通";
-        this.email = "6666.qq.com";
+    public ConsumerDTO() {
+        this.name = "钱嘉俊";
+        this.age = 27;
+        this.address = "浙江省杭州市下城区朝晖街道潮王路18号";
+        this.email = "951237941@qq.com";
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Consumer {
         return "Consumer{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", add='" + add + '\'' +
+                ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }

@@ -1,6 +1,6 @@
 package com.jack.producer.controller;
 
-import com.jack.core.entity.Producer;
+import com.jack.core.entity.ProducerDTO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +15,7 @@ public class ProducerController {
 
     @RequestMapping(value = "producer")
     public String producer(){
-        Producer producer = new Producer();
+        ProducerDTO producer = new ProducerDTO();
         return producer.toString();
     }
 
