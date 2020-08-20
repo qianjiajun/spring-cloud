@@ -21,7 +21,7 @@ public class ConsumerController {
     @RequestMapping(value = "consumer", method = RequestMethod.GET)
     public String consumer() {
         String consumer = producerService.producer();
-        return consumer;
+        return String.format("Consumer-Client(port:7002): %s", consumer);
     }
 
 }

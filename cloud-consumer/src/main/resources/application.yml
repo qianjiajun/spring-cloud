@@ -10,6 +10,8 @@ server:
   servlet:
     context-path: /consumer
 eureka:
+  producer:
+    name: producer-client
   client:
     service-url:
       #defaultZone 这个是不会提示的，此处需要自己写

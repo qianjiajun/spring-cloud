@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Version 1.0
  * @Class ProducerService.java
  */
-@FeignClient(name = "producer-client")
+@FeignClient(name = "${eureka.producer.name}")
 public interface ProducerService {
 
     /**
