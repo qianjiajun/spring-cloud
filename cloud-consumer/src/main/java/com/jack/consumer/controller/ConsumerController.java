@@ -2,9 +2,7 @@ package com.jack.consumer.controller;
 
 import com.jack.consumer.service.ProducerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author qjj
@@ -18,10 +16,15 @@ public class ConsumerController {
     @Autowired
     private ProducerService producerService;
 
-    @RequestMapping(value = "consumer", method = RequestMethod.GET)
-    public String consumer() {
-        String consumer = producerService.producer();
-        return String.format("Consumer-Client(port:7002): %s", consumer);
+    /**
+     * 参数需要完全一致
+     * @param name
+     * @return
+     */
+    @RequestMapping(value = "consumer")
+    public String consumer(@RequestParam(value = "name", required = false) String name) {
+        String consumer = producerService.producer(name);
+        return String.format("%s: Consumer-Client(port:7002): %s", name, consumer);
     }
 
 }

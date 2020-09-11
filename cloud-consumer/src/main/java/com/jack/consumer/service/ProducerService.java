@@ -2,7 +2,7 @@ package com.jack.consumer.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @Author qjj
@@ -15,10 +15,10 @@ public interface ProducerService {
 
     /**
      * 读取producer-server 子项目的 producer/producer 接口
-     *
+     * @param name
      * @return string
      */
-    @RequestMapping(value = "/producer/producer", method = RequestMethod.GET)
-    String producer();
+    @RequestMapping(value = "/producer/producer")
+    String producer(@RequestParam(value = "name", required = false) String name);
 
 }
